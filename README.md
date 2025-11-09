@@ -1,69 +1,58 @@
+---
+
 #  Micro Scraper API
 
-A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.  
+A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.
 This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
----
-
-##  Features
-
-- **GET /api/scrape?url=...** — main endpoint for scraping.
-- Extracts:
-  - Page **Title**
-  - **Meta Description**
-  - First **H1** tag
-- **Automatic timeout** after 20 seconds (prevents long-running scrapes).
-- **Custom User-Agent** to simulate a real Chrome browser.
-- **Error handling** with appropriate HTTP response codes.
-- **Simple JSON output**, ready for integration with other services.
 
 ---
 
 ##  Features
 
-- **GET /api/scrape?url=...** — main endpoint for scraping.
-- Extracts:
-  - Page **Title**
-  - **Meta Description**
-  - First **H1** tag
-- **Automatic timeout** after 20 seconds (prevents long-running scrapes).
-- **Custom User-Agent** to simulate a real Chrome browser.
-- **Error handling** with appropriate HTTP response codes.
-- **Simple JSON output**, ready for integration with other services.
+* **GET /api/scrape?url=...** — main endpoint for scraping.
+* Extracts:
+
+  * Page **Title**
+  * **Meta Description**
+  * First **H1** tag
+* **Automatic timeout** after 20 seconds (prevents long-running scrapes).
+* **Custom User-Agent** to simulate a real Chrome browser.
+* **Error handling** with appropriate HTTP response codes.
+* **Simple JSON output**, ready for integration with other services.
 
 ---
 
 ##  Tech Stack
 
-| Component | Description |
-|------------|-------------|
-| **Node.js** | JavaScript runtime |
-| **Express** | Web framework for API routing |
-| **Puppeteer** | Headless browser for scraping |
-| **Nodemon** | Auto-restart tool for development |
+| Component     | Description                       |
+| ------------- | --------------------------------- |
+| **Node.js**   | JavaScript runtime                |
+| **Express**   | Web framework for API routing     |
+| **Puppeteer** | Headless browser for scraping     |
+| **Nodemon**   | Auto-restart tool for development |
 
 ---
 
 ##  Project Structure
 
 ```
-
 micro-scraper-api/
 ├─ index.js                # Main Express server
 ├─ scraperService.js       # Puppeteer logic and utility functions
 ├─ package.json            # Dependencies and scripts
 └─ README.md               # Project documentation
-
-````
+```
 
 ---
 
 ##  Installation
 
 1. **Clone this repository**
+
    ```bash
    git clone https://github.com/Aul-rhmn/micro-scraper.git
    cd micro-scraper-api
-````
+   ```
 
 2. **Install dependencies**
 
@@ -154,6 +143,6 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 
 ##  License
 
-This project is licensed under the **ISC License**.
+This project is licensed.
 
-```
+---
