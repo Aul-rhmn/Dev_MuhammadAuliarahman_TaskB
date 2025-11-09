@@ -2,6 +2,19 @@
 
 A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.  
 This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
+---
+
+##  Features
+
+- **GET /api/scrape?url=...** — main endpoint for scraping.
+- Extracts:
+  - Page **Title**
+  - **Meta Description**
+  - First **H1** tag
+- **Automatic timeout** after 20 seconds (prevents long-running scrapes).
+- **Custom User-Agent** to simulate a real Chrome browser.
+- **Error handling** with appropriate HTTP response codes.
+- **Simple JSON output**, ready for integration with other services.
 
 ---
 
