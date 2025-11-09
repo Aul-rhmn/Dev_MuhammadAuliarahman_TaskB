@@ -1,4 +1,62 @@
+# Micro Scraper API
+
+A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**. 
+
+This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
+
+---
+
+## Features
+
+- **GET /api/scrape?url=...** – Main endpoint for scraping.
+- **Extracted Data:** Page **Title**, **Meta Description**, and First **H1** tag.
+- **Automatic Timeout:** Cancels scraping after 20 seconds.
+- **Custom User-Agent:** Simulates a real Chrome browser for reliable results.
+- **Error Handling:** Provides proper HTTP status codes for errors (400, 500, 504).
+- **Output:** Simple JSON format, ready for immediate integration.
+
+---
+
+## Tech Stack
+
 | Component | Description |
 | :--- | :--- |
 | **Node.js** | JavaScript runtime |
 | **Express** | Web framework for API routing |
+| **Puppeteer** | Headless browser for scraping |
+| **Nodemon** | Auto-restart tool for development |
+
+---
+
+## Installation
+
+### Steps to Run the Project
+
+1. Clone this repository:
+    ```bash
+    git clone [https://github.com/Aul-rhmn/micro-scraper.git](https://github.com/Aul-rhmn/micro-scraper.git)
+    cd micro-scraper-api
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Run the server:
+    * **Development Mode (with Nodemon):**
+        ```bash
+        npm run dev
+        ```
+    * **Production Mode:**
+        ```bash
+        npm start
+        ```
+4. API will run on:
+    ```
+    http://localhost:3000
+    ```
+
+---
+
+## API Usage
+
+### Endpoint
