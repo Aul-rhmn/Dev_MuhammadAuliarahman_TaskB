@@ -50,7 +50,7 @@ micro-scraper-api/
 1. **Clone this repository**
 
    ```bash
-   git clone https://github.com/Aul-rhmn/micro-scraper.git
+   git clone https://github.com/Aul-rhmn/Dev_MuhammadAuliarahman_TaskB.git
    cd micro-scraper-api
    ```
 
