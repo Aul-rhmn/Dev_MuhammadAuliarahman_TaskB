@@ -1,6 +1,6 @@
 # 🚀 Micro Scraper API
 
-A lightweight web scraping API built with **Node.js**, **Express**,** and Puppeteer**.
+A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**. 
 
 This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
 
@@ -33,18 +33,18 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ## 💻 Installation
 
-1.  **Clone this repository**
+1. **Clone this repository**
     ```bash
     git clone [https://github.com/Aul-rhmn/micro-scraper.git](https://github.com/Aul-rhmn/micro-scraper.git)
     cd micro-scraper-api
     ```
 
-2.  **Install dependencies**
+2. **Install dependencies**
     ```bash
     npm install
     ```
 
-3.  **Run the server**
+3. **Run the server**
     * For development:
         ```bash
         npm run dev
@@ -54,7 +54,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
         npm start
         ```
 
-4.  API will run on:
+4. API will run on:
     ```
     http://localhost:3000
     ```
