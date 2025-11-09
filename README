@@ -1,1 +1,33 @@
-# Micro Scraper
+# 🕸️ Micro Scraper API
+
+A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.  
+This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
+
+---
+
+## 🚀 Features
+
+- **GET /api/scrape?url=...** — main endpoint for scraping.
+- Extracts:
+  - Page **Title**
+  - **Meta Description**
+  - First **H1** tag
+- **Automatic timeout** after 20 seconds (prevents long-running scrapes).
+- **Custom User-Agent** to simulate a real Chrome browser.
+- **Error handling** with appropriate HTTP response codes.
+- **Simple JSON output**, ready for integration with other services.
+
+---
+
+## ⚙️ Tech Stack
+
+| Component | Description |
+|------------|-------------|
+| **Node.js** | JavaScript runtime |
+| **Express** | Web framework for API routing |
+| **Puppeteer** | Headless browser for scraping |
+| **Nodemon** | Auto-restart tool for development |
+
+---
+
+## 📂 Project Structure
