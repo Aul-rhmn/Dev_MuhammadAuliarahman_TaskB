@@ -1,4 +1,4 @@
-# 🚀 Micro Scraper API
+#  Micro Scraper API
 
 A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**. 
 
@@ -6,7 +6,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## ✨ Features
+##  Features
 
 * **GET /api/scrape?url=...** — Main endpoint for scraping.
 * **Extracted Data:** Page **Title**, **Meta Description**, and First **H1** tag.
@@ -17,7 +17,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component | Description |
 | :--- | :--- |
@@ -28,7 +28,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## 💻 Installation & Setup
+##  Installation & Setup
 
 1.  **Clone this repository**
     ```bash
@@ -59,6 +59,68 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## 🌍 API Usage
+##  API Usage
 
 ### Endpoint
+
+````
+
+GET /api/scrape?url=\<target\_url\>
+
+````
+
+### Example Request (using cURL)
+
+```bash
+curl "http://localhost:3000/api/scrape?url=[https://example.com](https://example.com)"
+````
+
+### Example Response (Success)
+
+```json
+{
+  "title": "Example Domain",
+  "metaDescription": "This domain is for use in illustrative examples in documents.",
+  "h1": "Example Domain",
+  "status": 200
+}
+```
+
+-----
+
+##  Error Responses
+
+| Status Code | Description | Example Response |
+| :---: | :--- | :--- |
+| **400** | Invalid or missing URL parameter. | `{"error": "Invalid URL"}` |
+| **504** | Scraping timeout (page took longer than 20 seconds). | `{"error": "Timeout"}` |
+| **500** | Internal server or scraping failure (e.g., DNS error, connection issue). | `{"error": "Scraping failed (e.g., DNS or connection issue)"}` |
+
+-----
+
+##  How It Works Internally
+
+1.  The API validates the input URL parameter.
+2.  It launches a **headless Chromium** browser instance via Puppeteer.
+3.  The browser waits until the target page is fully loaded.
+4.  It executes JavaScript to extract the required elements: `<title>`, `<meta name="description">` content, and the text of the first `<h1>` tag.
+5.  If successful, the results are returned as a JSON object.
+6.  A **20-second timer** ensures the process is terminated and returns a 504 status code if the page takes too long to respond.
+
+-----
+
+##  Available Scripts
+
+| Command | Description |
+| :--- | :--- |
+| `npm start` | Runs the server in production environment. |
+| `npm run dev` | Runs the server in development mode using Nodemon (auto-restarts on file changes). |
+
+-----
+
+##  License
+
+This project is licensed.
+
+```
+```
