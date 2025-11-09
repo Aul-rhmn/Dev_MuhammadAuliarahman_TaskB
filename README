@@ -1,4 +1,4 @@
-# Micro Scraper API
+# 🚀 Micro Scraper API
 
 A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**. 
 
@@ -8,15 +8,12 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ## ✨ Features
 
-* **GET /api/scrape?url=...** — main endpoint for scraping
-* Extracts:
-    * Page **Title**
-    * **Meta Description**
-    * First **H1** tag
-* **Automatic timeout** after 20 seconds (prevents long-running scrapes)
-* **Custom User-Agent** to simulate a real Chrome browser
-* **Error handling** with proper HTTP response codes
-* **Simple JSON output**, ready for integration
+* **GET /api/scrape?url=...** — Main endpoint for scraping.
+* **Extracted Data:** Page **Title**, **Meta Description**, and First **H1** tag.
+* **Automatic Timeout:** Cancels scraping after 20 seconds.
+* **Custom User-Agent:** Simulates a real Chrome browser for reliable results.
+* **Error Handling:** Provides proper HTTP status codes for errors (400, 500, 504).
+* **Output:** Simple JSON format, ready for immediate integration.
 
 ---
 
@@ -31,30 +28,31 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## 💻 Installation
+## 💻 Installation & Setup
 
-1. **Clone this repository**
+1.  **Clone this repository**
     ```bash
     git clone [https://github.com/Aul-rhmn/micro-scraper.git](https://github.com/Aul-rhmn/micro-scraper.git)
     cd micro-scraper-api
     ```
 
-2. **Install dependencies**
+2.  **Install dependencies**
     ```bash
     npm install
     ```
 
-3. **Run the server**
-    * For development:
+3.  **Run the server**
+    
+    * **Development Mode (with Nodemon):**
         ```bash
         npm run dev
         ```
-    * For production:
+    * **Production Mode:**
         ```bash
         npm start
         ```
 
-4. API will run on:
+4.  The API will be accessible at:
     ```
     http://localhost:3000
     ```
