@@ -1,11 +1,13 @@
-# Micro Scraper API
+---
+
+#  Micro Scraper API
 
 A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.
 This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
 
 ---
 
-## Features
+##  Features
 
 * **GET /api/scrape?url=...** — main endpoint for scraping.
 * Extracts:
@@ -20,7 +22,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## Tech Stack
+##  Tech Stack
 
 | Component     | Description                   |
 | ------------- | ----------------------------- |
@@ -29,10 +31,21 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 | **Puppeteer** | Headless browser for scraping |
 | **Nodemon**   | Development auto-restart tool |
 
+---
+
+##  Project Structure
+
+```
+micro-scraper-api/
+├─ index.js                # Main Express server
+├─ scraperService.js       # Puppeteer logic and utility functions
+├─ package.json            # Dependencies and scripts
+└─ README.md               # Project documentation
+```
 
 ---
 
-## Installation
+##  Installation
 
 1. **Clone** this repository:
 
@@ -67,7 +80,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## API Usage
+##  API Usage
 
 ### **Endpoint:**
 
@@ -94,7 +107,7 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 
 ---
 
-## Error Responses
+##  Error Responses
 
 | Status Code | Description                          | Example                                                          |
 | ----------- | ------------------------------------ | ---------------------------------------------------------------- |
@@ -104,7 +117,7 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 
 ---
 
-## How It Works
+##  How It Works
 
 1. Validates the input URL using the built-in `URL` object.
 2. Launches a **headless Chromium** browser with Puppeteer.
@@ -119,7 +132,7 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 
 ---
 
-## Scripts
+##  Scripts
 
 | Command       | Description                         |
 | ------------- | ----------------------------------- |
@@ -128,8 +141,8 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 
 ---
 
-## License
+## 📄 License
 
-This project is licensed
+This project is licensed.
 
 ---
