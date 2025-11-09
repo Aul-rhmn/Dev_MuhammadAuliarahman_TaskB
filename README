@@ -1,29 +1,29 @@
-```md
 #  Micro Scraper API
 
-A lightweight web scraping API built with **Node.js**, **Express**, and **Puppeteer**.  
+A lightweight web scraping API built with **Node.js**, **Express**,** and Puppeteer**.
+
 This API allows users to scrape the `<title>`, `<meta name="description">`, and first `<h1>` element from any given webpage URL.
 
 ---
 
 ##  Features
 
-- **GET /api/scrape?url=...** — main endpoint for scraping
-- Extracts:
-  - Page **Title**
-  - **Meta Description**
-  - First **H1** tag
-- **Automatic timeout** after 20 seconds (prevents long-running scrapes)
-- **Custom User-Agent** to simulate a real Chrome browser
-- **Error handling** with proper HTTP response codes
-- **Simple JSON output**, ready for integration
+* **GET /api/scrape?url=...** — main endpoint for scraping
+* Extracts:
+    * Page **Title**
+    * **Meta Description**
+    * First **H1** tag
+* **Automatic timeout** after 20 seconds (prevents long-running scrapes)
+* **Custom User-Agent** to simulate a real Chrome browser
+* **Error handling** with proper HTTP response codes
+* **Simple JSON output**, ready for integration
 
 ---
 
 ##  Tech Stack
 
 | Component | Description |
-|------------|-------------|
+| :--- | :--- |
 | **Node.js** | JavaScript runtime |
 | **Express** | Web framework for API routing |
 | **Puppeteer** | Headless browser for scraping |
@@ -33,53 +33,51 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ##  Installation
 
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/Aul-rhmn/micro-scraper.git
-   cd micro-scraper-api
-````
+1.  **Clone this repository**
+    ```bash
+    git clone [https://github.com/Aul-rhmn/micro-scraper.git](https://github.com/Aul-rhmn/micro-scraper.git)
+    cd micro-scraper-api
+    ```
 
-2. **Install dependencies**
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-   ```bash
-   npm install
-   ```
+3.  **Run the server**
+    * For development:
+        ```bash
+        npm run dev
+        ```
+    * For production:
+        ```bash
+        npm start
+        ```
 
-3. **Run the server**
-
-   ```bash
-   npm run dev
-   ```
-
-   or for production:
-
-   ```bash
-   npm start
-   ```
-
-4. API will run on:
-
-   ```
-   http://localhost:3000
-   ```
+4.  API will run on:
+    ```
+    http://localhost:3000
+    ```
 
 ---
 
 ##  API Usage
 
-### **Endpoint**
+### Endpoint
 
-```
-GET /api/scrape?url=<target_url>
-```
+````
 
-### **Example Request**
+GET /api/scrape?url=\<target\_url\>
+
+````
+
+### Example Request
 
 ```bash
-curl "http://localhost:3000/api/scrape?url=https://example.com"
-```
+curl "http://localhost:3000/api/scrape?url=[https://example.com](https://example.com)"
+````
 
-### **Example Response**
+### Example Response
 
 ```json
 {
@@ -90,47 +88,43 @@ curl "http://localhost:3000/api/scrape?url=https://example.com"
 }
 ```
 
----
+-----
 
 ##  Error Responses
 
-| Status Code | Description                          | Example                                                          |
-| ----------- | ------------------------------------ | ---------------------------------------------------------------- |
-| **400**     | Invalid or missing URL               | `{ "error": "Invalid URL" }`                                     |
-| **504**     | Timeout (page took too long to load) | `{ "error": "Timeout" }`                                         |
-| **500**     | Internal or scraping failure         | `{ "error": "Scraping failed (e.g., DNS or connection issue)" }` |
+| Status Code | Description | Example |
+| :---: | :--- | :--- |
+| **400** | Invalid or missing URL | `{"error": "Invalid URL"}` |
+| **504** | Timeout (page took too long to load) | `{"error": "Timeout"}` |
+| **500** | Internal or scraping failure | `{"error": "Scraping failed (e.g., DNS or connection issue)"}` |
 
----
+-----
 
 ##  How It Works
 
-1. Validates the input URL using Node’s `URL` object
-2. Launches a **headless Chromium** browser via Puppeteer
-3. Waits until the page finishes loading
-4. Extracts:
+1.  Validates the input URL using Node’s `URL` object
+2.  Launches a **headless Chromium** browser via Puppeteer
+3.  Waits until the page finishes loading
+4.  Extracts:
+      * `<title>` text
+      * `<meta name="description">` content
+      * First `<h1>` tag text
+5.  Returns results as JSON
+6.  Automatically cancels if scraping exceeds 20 seconds
 
-   * `<title>` text
-   * `<meta name="description">` content
-   * First `<h1>` tag text
-5. Returns results as JSON
-6. Automatically cancels if scraping exceeds 20 seconds
-
----
+-----
 
 ##  Scripts
 
-| Command       | Description                         |
-| ------------- | ----------------------------------- |
-| `npm start`   | Run the server (production mode)    |
+| Command | Description |
+| :--- | :--- |
+| `npm start` | Run the server (production mode) |
 | `npm run dev` | Run with Nodemon (development mode) |
 
----
+-----
 
-## 📄 License
+##  License
 
 This project is licensed.
 
-````
-
----
-
+```
