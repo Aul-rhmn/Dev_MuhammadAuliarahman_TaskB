@@ -1,4 +1,4 @@
-# Micro Scraper API
+# 🚀 Micro Scraper API
 
 A lightweight web scraping API built with **Node.js**, **Express**,** and Puppeteer**.
 
@@ -6,7 +6,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## Features
+## ✨ Features
 
 * **GET /api/scrape?url=...** — main endpoint for scraping
 * Extracts:
@@ -20,7 +20,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Component | Description |
 | :--- | :--- |
@@ -31,7 +31,7 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-##  Installation
+## 💻 Installation
 
 1.  **Clone this repository**
     ```bash
@@ -61,6 +61,6 @@ This API allows users to scrape the `<title>`, `<meta name="description">`, and 
 
 ---
 
-##  API Usage
+## 🌍 API Usage
 
 ### Endpoint
